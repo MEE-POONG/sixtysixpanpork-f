@@ -1,29 +1,12 @@
-/*!
-
-=========================================================
-* Paper Kit React - v1.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
-// nodejs library that concatenates strings
 import classnames from "classnames";
-// reactstrap components
 import {
-  Button,
   Collapse,
   NavbarBrand,
+  DropdownMenu,
+  DropdownToggle,
+  DropdownItem,
+  UncontrolledDropdown,
   Navbar,
   NavItem,
   NavLink,
@@ -62,102 +45,89 @@ function IndexNavbar() {
     };
   });
   return (
-    <Navbar className={classnames("fixed-top", navbarColor)} expand="lg">
-      <Container>
-        <div className="navbar-translate">
-          <NavbarBrand
-            data-placement="bottom"
-            href="/index"
-            target="_blank"
-            title="Coded by Creative Tim"
-          >
-            Paper Kit React
-          </NavbarBrand>
-          <button
-            aria-expanded={navbarCollapse}
-            className={classnames("navbar-toggler navbar-toggler", {
-              toggled: navbarCollapse,
-            })}
-            onClick={toggleNavbarCollapse}
-          >
-            <span className="navbar-toggler-bar bar1" />
-            <span className="navbar-toggler-bar bar2" />
-            <span className="navbar-toggler-bar bar3" />
-          </button>
-        </div>
-        <Collapse
-          className="justify-content-end"
-          navbar
-          isOpen={navbarCollapse}
-        >
-          <Nav navbar>
-            <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="https://twitter.com/CreativeTim?ref=creativetim"
-                target="_blank"
-                title="Follow us on Twitter"
-              >
-                <i className="fa fa-twitter" />
-                <p className="d-lg-none">Twitter</p>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="https://www.facebook.com/CreativeTim?ref=creativetim"
-                target="_blank"
-                title="Like us on Facebook"
-              >
-                <i className="fa fa-facebook-square" />
-                <p className="d-lg-none">Facebook</p>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
-                target="_blank"
-                title="Follow us on Instagram"
-              >
-                <i className="fa fa-instagram" />
-                <p className="d-lg-none">Instagram</p>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="https://www.github.com/CreativeTimOfficial/paper-kit-react?ref=creativetim"
-                target="_blank"
-                title="Star on GitHub"
-              >
-                <i className="fa fa-github" />
-                <p className="d-lg-none">GitHub</p>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                href="https://demos.creative-tim.com/paper-kit-react/#/documentation?ref=pkr-index-navbar"
-                target="_blank"
-              >
-                <i className="nc-icon nc-book-bookmark" /> Documentation
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <Button
-                className="btn-round"
-                color="danger"
-                href="#pablo"
-                target="_blank"
-                disabled
-              >
-                Upgrade to Pro
-              </Button>
-            </NavItem>
-          </Nav>
-        </Collapse>
+    <div className="header-area">
+      <Container className="p-0">
+        <Navbar className={classnames("p-0",navbarColor)} expand="lg">
+          <Collapse className="justify-content-between" isOpen={navbarCollapse} navbar>
+            <Nav navbar className="header-menu" style={{ width: "40%", justifyContent: "space-between" }}>
+              <NavItem>
+                <NavLink href="/home">Home</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/food">Food Menu</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/about">About</NavLink>
+              </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Blog
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                    Option 1
+                  </DropdownItem>
+                  <DropdownItem>
+                    Option 2
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    Reset
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              <NavItem>
+                <NavLink href="/contact">Contact</NavLink>
+              </NavItem>
+            </Nav>
+            <NavbarBrand href="/" className="p-0 m-0" style={{ display: "contents" }}>
+              <img alt="..." className="logo-header my-2" src={require("assets/img/SixtySix.png")} style={{ width: "10%" }} />
+            </NavbarBrand>
+            <Nav navbar style={{ width: "40%" }} className="justify-content-end d-flex header-contact">
+              <NavItem>
+                <NavLink
+                  data-placement="bottom"
+                  href="https://www.facebook.com/CreativeTim?ref=creativetim"
+                  target="_blank"
+                  title="Like us on Facebook"
+                >
+                  <i className="fa fa-facebook-square" />
+                  <p className="d-lg-none">Facebook</p>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  data-placement="bottom"
+                  href="https://twitter.com/CreativeTim?ref=creativetim"
+                  target="_blank"
+                  title="Follow us on Twitter"
+                >
+                  <i className="fa fa-twitter" />
+                  <p className="d-lg-none">Twitter</p>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  data-placement="bottom"
+                  href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
+                  target="_blank"
+                  title="Follow us on Instagram"
+                >
+                  <i className="fa fa-instagram" />
+                  <p className="d-lg-none">Instagram</p>
+                </NavLink>
+              </NavItem>
+              <NavItem className="header-tel">
+                <NavLink href="#" target="_blank">
+                  <p className="m-0">+10 367 453 7382</p>
+                </NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+
+        </Navbar>
       </Container>
-    </Navbar>
+    </div>
   );
 }
 
