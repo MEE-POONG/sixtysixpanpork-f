@@ -1,78 +1,103 @@
-/*!
 
-=========================================================
-* Paper Kit React - v1.2.0
-=========================================================
+import React, { useState } from "react";
+import {
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselCaption
+} from "reactstrap";
 
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-/*eslint-disable*/
-import React from "react";
-
-// reactstrap components
-import { Container } from "reactstrap";
-
-// core components
-
-function SlideHeader() {
-  return (
-    <>
-      <div
-        className="page-header section-dark"
-        style={{
-          backgroundImage:
-            "url(" + require("assets/img/antoine-barres.jpg") + ")",
-        }}
+  const items = [
+    {
+      src: require('assets/img/herder/slide1.jpg'),
+      altText: 'Slide 1',
+      header: 'Main course',
+      text: 'PanProk',
+      detail: 'Jai Bang Set'
+    },
+    {
+      src: require('assets/img/herder/slide1.jpg'),
+      altText: 'Slide 2',
+      header: 'Main course',
+      text: 'PanProk',
+      detail: 'Jai Thung Set'
+    },
+    {
+      src: require('assets/img/herder/slide1.jpg'),
+      altText: 'Slide 3',
+      header: 'Main course',
+      text: 'PanProk',
+      detail: 'Jai Purn Set'
+    },
+    {
+      src: require('assets/img/herder/slide1.jpg'),
+      altText: 'Slide 4',
+      header: 'Dessert',
+      text: 'Cake',
+      detail: 'chocolate'
+    },
+    {
+      src: require('assets/img/herder/slide1.jpg'),
+      altText: 'Slide 4',
+      header: 'Drink',
+      text: 'soft drink',
+      detail: 'Est'
+    },
+    {
+      src: require('assets/img/herder/slide1.jpg'),
+      altText: 'Slide 4',
+      header: 'Drink',
+      text: 'beer',
+      detail: 'Chang'
+    }
+  ];
+  
+  const SlideHeader = (props) => {
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [animating, setAnimating] = useState(false);
+  
+    const next = () => {
+      if (animating) return;
+      const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+      setActiveIndex(nextIndex);
+    }
+  
+    const previous = () => {
+      if (animating) return;
+      const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+      setActiveIndex(nextIndex);
+    }
+  
+    // const goToIndex = (newIndex) => {
+    //   if (animating) return;
+    //   setActiveIndex(newIndex);
+    // }
+  
+    const slides = items.map((item) => {
+      return (
+        <CarouselItem
+          onExiting={() => setAnimating(true)}
+          onExited={() => setAnimating(false)}
+          key={item.src}
+        >
+          <img src={item.src} alt={item.altText} />
+          <CarouselCaption className="text-header" captionHeader={item.header} />
+          <CarouselCaption className="text-detail" captionHeader={item.text} captionText={item.detail}/>
+        </CarouselItem>
+      );
+    });
+  
+    return (
+      <Carousel
+        activeIndex={activeIndex}
+        next={next}
+        previous={previous}
       >
-        <div className="filter" />
-        <div className="content-center">
-          <Container>
-            <div className="title-brand">
-              <h1 className="presentation-title">Paper Kit React</h1>
-              <div className="fog-low">
-                <img alt="..." src={require("assets/img/fog-low.png")} />
-              </div>
-              <div className="fog-low right">
-                <img alt="..." src={require("assets/img/fog-low.png")} />
-              </div>
-            </div>
-            <h2 className="presentation-subtitle text-center">
-              Make your mark with a Free Bootstrap 4 (Reactstrap) UI Kit!
-            </h2>
-          </Container>
-        </div>
-        <div
-          className="moving-clouds"
-          style={{
-            backgroundImage: "url(" + require("assets/img/clouds.png") + ")",
-          }}
-        />
-        <h6 className="category category-absolute">
-          Designed and coded by{" "}
-          <a
-            href="https://www.creative-tim.com?ref=pkr-index-page"
-            target="_blank"
-          >
-            <img
-              alt="..."
-              className="creative-tim-logo"
-              src={require("assets/img/creative-tim-white-slim2.png")}
-            />
-          </a>
-        </h6>
-      </div>
-    </>
-  );
-}
-
-export default SlideHeader;
+        {/* <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} /> */}
+        {slides}
+        <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+        <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+      </Carousel>
+    );
+  }
+  export default SlideHeader;

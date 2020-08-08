@@ -48,6 +48,14 @@ function IndexNavbar() {
     <div className="header-area">
       <Container className="p-0">
         <Navbar className={classnames("p-0",navbarColor)} expand="lg">
+          <button
+            aria-expanded={navbarCollapse}
+            className={classnames("navbar-toggler navbar-toggler", {
+              toggled: navbarCollapse,
+            })}
+            onClick={toggleNavbarCollapse}
+          >sss
+          </button>
           <Collapse className="justify-content-between" isOpen={navbarCollapse} navbar>
             <Nav navbar className="header-menu" style={{ width: "40%", justifyContent: "space-between" }}>
               <NavItem>

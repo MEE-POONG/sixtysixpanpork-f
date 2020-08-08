@@ -15,9 +15,9 @@ function NucleoIcons() {
         <h1>Paper Kit React Icons</h1>
         <p>
           Built with{" "}
-          <a href="https://nucleoapp.com/?ref=1712" target="_blank">
+          {/* <a href="https://nucleoapp.com/?ref=1712" target="_blank">
             nucleoapp.com
-          </a>
+          </a> */}
         </p>
       </header>
       <div id="icons-wrapper">

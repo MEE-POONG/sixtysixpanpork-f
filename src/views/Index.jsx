@@ -3,6 +3,7 @@ import React from "react";
 import IndexNavbar from "components/Navbars/IndexNavbar.jsx";
 // import IndexHeader from "components/Headers/IndexHeader.jsx";
 import SlideHeader from "components/Headers/SlideHeader.jsx";
+import FoodView from "components/Home/FoodView.jsx";
 // import ExamplesNavbar from "components/Navbars/ExamplesNavbar.jsx";
 // import DemoFooter from "components/Footers/DemoFooter.jsx";
 // import SectionButtons from "views/index-sections/SectionButtons.jsx";
@@ -35,6 +36,7 @@ function Index() {
       <SlideHeader />
       {/* <ExamplesNavbar /> */}
       <div className="main">
+        <FoodView/>
         {/* <SectionButtons /> */}
         {/* <SectionNavbars /> */}
         {/* <SectionNavigation /> */}
