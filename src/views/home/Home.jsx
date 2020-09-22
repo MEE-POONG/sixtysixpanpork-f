@@ -20,7 +20,7 @@ import SlideHeader from "components/Headers/SlideHeader.jsx";
 // import SectionExamples from "views/index-sections/SectionExamples.jsx";
 // import SectionDownload from "views/index-sections/SectionDownload.jsx";
 
-function Index() {
+export default function Home() {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("index");
@@ -36,6 +36,7 @@ function Index() {
       <SlideHeader />
       {/* <ExamplesNavbar /> */}
       <div className="main">
+          <div>dddd</div>
         {/* <FoodView/> */}
         {/* <SectionButtons /> */}
         {/* <SectionNavbars /> */}
@@ -55,5 +56,3 @@ function Index() {
     </>
   );
 }
-
-export default Index;

@@ -62,6 +62,9 @@ function IndexNavbar() {
                 <NavLink href="/home">Home</NavLink>
               </NavItem>
               <NavItem>
+                <NavLink href="/home/index">index</NavLink>
+              </NavItem>
+              <NavItem>
                 <NavLink href="/food">Food Menu</NavLink>
               </NavItem>
               <NavItem>

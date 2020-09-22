@@ -19,9 +19,8 @@ import RegisterPage from "views/examples/RegisterPage.jsx";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      {/* <Route path="/index" render={(props) => <Index {...props} />} /> */}
-      <Route path="/home" exact={true} render={(props) => <Home {...props} />} />
-      <Route path="/home/index" render={(props) => <Index {...props} />} />
+      <Route path="/index" render={(props) => <Index {...props} />} />
+      <Route path="/index/home" render={(props) => <Home {...props} />} />
       <Route
         path="/nucleo-icons"
         render={(props) => <NucleoIcons {...props} />}
