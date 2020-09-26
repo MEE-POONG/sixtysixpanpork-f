@@ -37,7 +37,7 @@ import {
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.jsx";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.jsx";
-import DemoFooter from "components/Footers/DemoFooter.jsx";
+// import DemoFooter from "components/Footers/DemoFooter.jsx";
 
 function ProfilePage() {
   const [activeTab, setActiveTab] = React.useState("1");
@@ -191,7 +191,7 @@ function ProfilePage() {
           </TabContent>
         </Container>
       </div>
-      <DemoFooter />
+      {/* <DemoFooter /> */}
     </>
   );
 }

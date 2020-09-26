@@ -8,8 +8,7 @@ import "assets/css/bootstrap.min.css";
 import "assets/css/style.css";
 import "assets/scss/style.scss";
 // pages
-import Index from "views/Index.jsx";
-import Home from "views/home/Home";
+import App from "./App.jsx";
 import NucleoIcons from "views/NucleoIcons.jsx";
 import LandingPage from "views/examples/LandingPage.jsx";
 import ProfilePage from "views/examples/ProfilePage.jsx";
@@ -19,9 +18,8 @@ import RegisterPage from "views/examples/RegisterPage.jsx";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      {/* <Route path="/index" render={(props) => <Index {...props} />} /> */}
-      <Route path="/home" exact={true} render={(props) => <Home {...props} />} />
-      <Route path="/home/index" render={(props) => <Index {...props} />} />
+      <Route path="/" render={(props) => <App {...props} />} />
+      {/* <Route path="/home" exact={true} render={(props) => <Home {...props} />} /> */}
       <Route
         path="/nucleo-icons"
         render={(props) => <NucleoIcons {...props} />}

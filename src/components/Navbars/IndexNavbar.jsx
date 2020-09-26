@@ -62,9 +62,6 @@ function IndexNavbar() {
                 <NavLink href="/home">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/home/index">index</NavLink>
-              </NavItem>
-              <NavItem>
                 <NavLink href="/food">Food Menu</NavLink>
               </NavItem>
               <NavItem>
@@ -92,7 +89,7 @@ function IndexNavbar() {
               </NavItem>
             </Nav>
             <NavbarBrand href="/" className="p-0 m-0" style={{ display: "contents" }}>
-              <img alt="..." className="logo-header my-2" src={require("assets/img/SixtySix.png")} style={{ width: "10%" }} />
+              <img alt="..." className="logo-header my-2" src={require("assets/img/sixtysix.png")} style={{ width: "10%" }} />
             </NavbarBrand>
             <Nav navbar style={{ width: "40%" }} className="justify-content-end d-flex header-contact">
               <NavItem>

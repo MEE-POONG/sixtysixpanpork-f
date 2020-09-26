@@ -38,7 +38,7 @@ import {
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.jsx";
 import LandingPageHeader from "components/Headers/LandingPageHeader.jsx";
-import DemoFooter from "components/Footers/DemoFooter.jsx";
+// import DemoFooter from "components/Footers/DemoFooter.jsx";
 
 function LandingPage() {
   document.documentElement.classList.remove("nav-open");
@@ -361,7 +361,7 @@ function LandingPage() {
           </Container>
         </div>
       </div>
-      <DemoFooter />
+      {/* <DemoFooter /> */}
     </>
   );
 }

@@ -90,12 +90,12 @@ function SectionCarousel() {
                     activeIndex={activeIndex}
                     onClickHandler={goToIndex}
                   />
-                  {items.map((item) => {
+                  {items.map((item, i) => {
                     return (
                       <CarouselItem
                         onExiting={onExiting}
                         onExited={onExited}
-                        key={item.src}
+                        key={i}
                       >
                         <img src={item.src} alt={item.altText} />
                         <CarouselCaption
