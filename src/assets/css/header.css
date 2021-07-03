@@ -1,9 +1,14 @@
-.carousel-item img{
-    width: 100%;
+.carousel-item img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(45%) saturate(253%);
+  -webkit-filter: brightness(26%) saturate(165%);
+  -moz-filter: brightness(45%) saturate(253%);
 }
-.carousel{
-    font-size: 20px;
-    font-family: "Paytone One", sans-serif;
-    font-weight: 400;
-    color: #fff;
+.carousel {
+  font-size: 20px;
+  font-family: "Paytone One", sans-serif;
+  font-weight: 400;
+  color: #fff;
 }

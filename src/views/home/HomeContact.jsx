@@ -8,22 +8,19 @@ export default function HomeContact() {
     <div className="home-contact">
       <Container>
         <Row className="body">
-          <Col xs={12} xl={4} md={4} lg={4} >
-            <CardTitle >New York</CardTitle>
+          <Col xs={12} xl={6} md={6} lg={6} >
+            <CardTitle >Nakhon ratchasima</CardTitle>
             <CardText >
-              5th flora, 700/D kings road,green lane New York-1782 info@burger.com
+             Soi 1 Ratpracha Pak chong  30130
             </CardText>
-            <span>+10 378 483 6782</span>
+            <span>Sixtysix หมูกะทะ  </span>
           </Col>
-          <Col xs={12} xl={4} md={4} lg={4} >
-            <CardTitle >California</CardTitle>
+          <Col xs={12} xl={6} md={6} lg={6} >
+            <CardTitle >Delivery</CardTitle>
             <CardText >Ready to serve food</CardText>
-            <span>+10 378 483 6782</span>
+            <span>066-136-9555  </span>
           </Col>
-          <Col xs={12} xl={4} md={4} lg={4} >
-            <CardTitle >Stay Connected</CardTitle>
-            <CardText >Ready to serve food</CardText>
-          </Col>
+          
         </Row>
       </Container>
     </div>
