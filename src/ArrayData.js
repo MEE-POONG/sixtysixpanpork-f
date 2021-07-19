@@ -76,42 +76,43 @@ var GalleryArray = [
 ];
 const MenuArray = [
   {
-    src: require('assets/img/herder/slide1.jpg'),
+    src: require('./assets/img/vw1.jpg'),
     altText: 'Slide 1',
     header: 'Main course',
     text: 'PanProk',
-    detail: 'Jai Bang Set'
+    detail: 'Jai Bang Set',
+   
   },
   {
-    src: require('assets/img/herder/slide1.jpg'),
+    src: require('assets/img/vw1.jpg'),
     altText: 'Slide 2',
     header: 'Main course',
     text: 'PanProk',
-    detail: 'Jai Thung Set'
+    detail: 'Jai Thung Set',
   },
   {
-    src: require('assets/img/herder/slide1.jpg'),
+    src: require('assets/img/vw1.jpg'),
     altText: 'Slide 3',
     header: 'Main course',
     text: 'PanProk',
     detail: 'Jai Purn Set'
   },
   {
-    src: require('assets/img/herder/slide1.jpg'),
+    src: require('assets/img/ds.jpg'),
     altText: 'Slide 4',
     header: 'Dessert',
     text: 'Cake',
-    detail: 'chocolate'
+    detail: 'Strawberry'
   },
   {
-    src: require('assets/img/herder/slide1.jpg'),
+    src: require('assets/img/cola.jpg'),
     altText: 'Slide 4',
     header: 'Drink',
     text: 'soft drink',
-    detail: 'Est'
+    detail: 'Coca-Cola'
   },
   {
-    src: require('assets/img/herder/slide1.jpg'),
+    src: require('assets/img/herder/slide2.jpg'),
     altText: 'Slide 4',
     header: 'Drink',
     text: 'beer',

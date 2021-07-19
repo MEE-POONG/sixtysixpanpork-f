@@ -54,7 +54,7 @@ function IndexNavbar() {
               toggled: navbarCollapse,
             })}
             onClick={toggleNavbarCollapse}
-          >sss
+          >
           </button>
           <Collapse className="justify-content-between" isOpen={navbarCollapse} navbar>
             <Nav navbar className="header-menu" style={{ width: "40%", justifyContent: "space-between" }}>
@@ -62,7 +62,7 @@ function IndexNavbar() {
                 <NavLink href="/home">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/food">Food Menu</NavLink>
+                <NavLink href="/#Menus">Food Menu</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/about">About</NavLink>
@@ -98,7 +98,7 @@ function IndexNavbar() {
               <NavItem>
                 <NavLink
                   data-placement="bottom"
-                  href="https://www.facebook.com/CreativeTim?ref=creativetim"
+                  href="https://www.facebook.com/SixtySixPanPork"
                   target="_blank"
                   title="Like us on Facebook"
                 >
@@ -130,7 +130,7 @@ function IndexNavbar() {
               </NavItem>
               <NavItem className="header-tel">
                 <NavLink href="#" target="_blank">
-                  <p className="m-0">+10 367 453 7382</p>
+                  <p className="m-0">066-134-9555</p>
                 </NavLink>
               </NavItem>
             </Nav>

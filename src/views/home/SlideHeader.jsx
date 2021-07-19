@@ -7,6 +7,7 @@ import {
   CarouselCaption
 } from "reactstrap";
 import { MenuArray } from "../../ArrayData";
+import '../../assets/scss/header.scss'
 
   function SlideHeader() {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -27,7 +28,7 @@ import { MenuArray } from "../../ArrayData";
     const slides = MenuArray.map((MenuArray, i) => {
       console.log(MenuArray);
       return (
-        <CarouselItem
+        <CarouselItem 
           onExiting={() => setAnimating(true)}
           onExited={() => setAnimating(false)}
           key={i}
